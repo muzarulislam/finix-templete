@@ -1,97 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-.container-fluid{
+body{
+    font-family: "Rubik", sans-serif;
+}
+.graybg{
+    background-color: #f9fafb;
+}
+/*  ================
+Header-Menu-Section
+==================== */
+.header-menu .container-fluid,
+.slider-section .container-fluid{
     max-width: 1480px;
 }
-a{
+ul.our-menu li a{
     text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #111;
+    font-weight: 500;
 }
-.default-btn {
-    border: none;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    z-index: 1;
-    background-color: #e73c3e;
-    color: #ffffff;
-    transition: 0.5s;
-    border-radius: 5px;
-    opacity: 1;
-    font-weight: 600;
-    font-size: 18px;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  .default-btn span {
-    position: absolute;
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: #111111;
-    color: #ffffff;
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    border-radius: 5px;
-    opacity: 1;
-  }
-  .default-btn:hover {
-    color: #ffffff !important;
-  }
-  .default-btn:hover span {
-    width: 225%;
-    height: 562.5px;
-  }
-  .default-btn i {
-    font-size: 12px;
-    position: relative;
-    top: -1px;
-    margin-left: 10px;
-  }
 
-/* Header-Menu */
-.our-menu .nav-link{
-    color: #111;
-    font-weight: 500;
-}
-.header-info{
-    padding-left: 30px;
-}
-.header-search{
-    padding-right: 10px;
-    text-align: center;
-    font-size: 22px;
-    border-right: 1px solid #ddd;
-}
-.header-call{
-    width: 220px;
-}
-.header-call-info span{
-    color: #606060;
-}
-.header-call-info  a{
-    font-weight: 500;
-    color: #111;
-    text-decoration: none;
-}
-.header-call-icon{
-    font-size: 30px;
-    color: #e73a3e;
-}
-.header-btn{
-    align-items: flex-end;
-}
-/* Menu Start */
-.nav-item{
-    padding: 0px 10px;
-}
-.nav-item i{
-    font-size: 12px;
-}
+/* Menu-Hover-Secrion */
 ul.our-menu li{
     position: relative;
 }
@@ -102,6 +32,7 @@ ul.our-menu li ul{
     left: 0;
     background: #fafafa;
     list-style: none;
+    padding: 10px;
     opacity: 0;
     visibility: hidden;
     transition: all .4s ease-in-out;
@@ -119,26 +50,78 @@ ul.our-menu li ul li a:hover{
     color: #e73a3e;
 }
 
-/* Banner */
+/* Heder-Right */
+.header-search{
+    width: 60px;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 20px;
+    border-right: 1px solid #ddd;
+}
+.header-call{
+    width: 220px;
+}
+.header-call-info span{
+    color: #606060;
+}
+.header-call-info  a{
+    font-weight: 500;
+    color: #111;
+    text-decoration: none;
+}
+.header-call-icon{
+    font-size: 30px;
+    color: #e73a3e;
+}
+body .btn-primary{
+    background: #e73a3e !important;
+    border-color: #e73a3e;
+    padding: 10px 30px;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+body .btn-primary:hover{
+    border-color: #111;
+}
+body .btn-primary::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #111;
+    border-color: #111;
+    z-index: -1;
+    transition: .4s;
+}
+body .btn-primary:hover::after{
+    width: 100%;
+}
+
+/* ===============
+Banner-Section
+=================== */
 .slider-section{
     background: url(assets/banner.jpg) no-repeat top center;
     background-size: cover;
     background-attachment: fixed;
 }
 .slider-content-wrap{
-    height: 90vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     position: relative;
 }
 .slider-content h6{
     color: #e73a3e;
-
 }
 .slider-content h1{
     font-size: 60px;
     margin-top: 25px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 .slider-content p{
     font-weight: 500;
@@ -147,8 +130,9 @@ ul.our-menu li ul li a:hover{
 }
 .header-social{
     position: absolute;
-    left: 40px;
+    left: 0;
     bottom: 0;
+    margin-left: 40px;
 }
 .header-social ul{
     list-style: none;
@@ -173,15 +157,17 @@ ul.our-menu li ul li a:hover{
     text-decoration: none;
     display: inline-block;
     padding: 0 14px;
-    color: #111;
+    color: #000;
     font-size: 20px;
     transition: .5s;
 }
-.header-social ul li a:hover i{
+.header-social ul li a:hover{
     color: red;
 }
 
-/* Sloomotion */
+/* ===============
+Sloomotion Start
+================== */
 .logo-section{
     padding-bottom: 1px solid #ddd;
 }
@@ -190,7 +176,9 @@ ul.our-menu li ul li a:hover{
     padding-left: 0;
 }
 
-/* About */
+/* =================
+About-Section 
+====================*/
 .about-image{
     position: relative;
 }
@@ -198,7 +186,7 @@ ul.our-menu li ul li a:hover{
     position: absolute;
     right: 30px;
     bottom: 0;
-    background: url(https://i.ibb.co/jMD2qxY/shape.png);
+    background: url(assets/shape.png);
     height: 200px;
     width: 200px;
     background-size: content;
@@ -221,14 +209,14 @@ ul.our-menu li ul li a:hover{
     font-weight: 400;
 }
 .finix-text h2{
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .finix-text p{
     color: #606060;
-    font-size: 18px;
+    font-size: 16px;
 }
 .finix-text strong{
     color: #606060;
@@ -246,29 +234,55 @@ ul.our-menu li ul li a:hover{
 .finix-text ul li::before{
     content: "\f00c";
     font: var(--fa-font-solid);
-    font-weight: 800;
+    font-weight: 400;
+    font-size: 25px;
     color: #e63b3d;
     display: inline-block;
     margin-right: 10px;
 }
 
-/* Why people choose us */
+/* ======================
+Why people choose us Start
+=========================== */
 .finix-text{
     position: relative;
+}
+.play-animation-btn::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    animation: ripple 1.6s ease-out infinite;
+    opacity: 0;
+    border-radius: 50%;
+    background: #e73c3e;
 }
 .play-animation-btn{
     width: 90px;
     height: 90px;
     display: inline-block;
     background: #fff;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     line-height: 90px;
     color: #e73a3e;
     border-radius: 50%;
     position: absolute;
-    right: 36%;
-    bottom: 51px;
+    right: 34%;
+    bottom: 60px;
+}
+.play-animation-btn i{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #e73a3e;
+    color: #FFF;
+    text-align: center;
+    border-radius: 50%;
 }
 .play-animation-btn::before{
     content: "";
@@ -295,9 +309,15 @@ ul.our-menu li ul li a:hover{
         opacity: 0;
     }
 }
+.features-item p{
+    line-height: 1.8;
+    color: #606060;
+    font-weight: 400;
+    font-size: 16px;
+}
 .features-item{
     background: #fff;
-    padding: 30px;
+    padding: 10px;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
@@ -306,18 +326,18 @@ ul.our-menu li ul li a:hover{
 .features-item::before{
     content: "";
     position: absolute;
-    top: -150px;
+    top: -157px;
     right: 0;
     left: 0;
     margin: auto;
     width: 90%;
-    height: 70%;
+    height: 80%;
     background: #fdebeb;
     border-radius: 50%;
 }
 .features-item .ft-icon i{
     color: #e73c3e;
-    font-size: 50px;
+    font-size: 40px;
     background: #fff;
     height: 90px;
     width: 90px;
@@ -337,5 +357,404 @@ ul.our-menu li ul li a:hover{
 }
 .features-item .ft-icon{
     position: relative;
+    z-index: 1;
+}
+
+/* =====================================
+You deserve a better business loan Start 
+========================================*/
+.step-timeline p{
+    color: #646462;
+}
+.step-timeline ul::before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    width: 1px;
+    background-color: red;
+    height: calc(100% - 100px);
+}
+.step-timeline ul{
+    list-style: none;
+    position: relative;
+    padding-left: 60px;
+}
+.step-timeline ul li::before{
+    content: attr(data-counter);
+    position: absolute;
+    top: 0;
+    left: -65px;
+    height: 40px;
+    width: 40px;
+    background: #f9fafb;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+}
+.step-timeline ul li{
+    margin-bottom: 25px;
+    position: relative;
+}
+.step-timeline ul li strong{
+    font-size: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Form */
+.calculate{
+    background-color: #fdebeb;
+    padding: 35px;
+}
+.form-group label{
+    display: block;
+    padding-bottom: 10px;
+    color: #646462;
+    font-size: 14px;
+}
+.form-control{
+    height: 30px;
+    font-size: 14px;
+}
+select#select-money{
+    height: 32px;
+}
+.form-group{
+    margin-bottom: 20px;
+}
+.form-group input{
+    border: none;
+    border-radius: 0;
+    padding: 14px 15px;
+}
+.form-group select{
+    border: none;
+    border-radius: 0;
+    height: 53px;
+}
+
+/* ==========================
+Call to discuss your Solution
+============================= */
+.coll-to-action-bg{
+    background: #e73a3e;
+    padding: 60px;
+    padding-bottom: 40px;
+    color: #fff;
+    border-radius: 6px;
+}
+.coll-to-action-bg h2{
+    font-size: 35px;
+    font-weight: 400;
+    border-right: 1px solid #ddd;
+}
+.coll-to-action-right{
+    margin-top: 18px;
+}
+.coll-to-action-right span{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    color: #e73a3e;
+    font-size: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    margin-right: 20px;
+}
+.coll-to-action-right a{
+    display: inline-block;
+    color: #ddd;
+    text-decoration: none;
+    color: #fff;
+    font-size: 40px;
+}
+.values-item{
+    margin-bottom: 10px;
+}
+.values-icon i{
+    font-size: 20px;
+}
+.values-item .values-icon{
+    font-size: 39px;
+    color: #e73a3e;
+    margin-right: 30px;
+}
+.values-text p{
+    color: #606060;
+}
+.our-company-image{
+    text-align: right;
+    margin-top: 35px;
+}
+
+/* ===================================
+Only the best professional services 
+===================================== */
+.services-tab-item{
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 40px !important;
+    padding-bottom: 20px;
+}
+.services-tab-item li{
+    flex: 1 1 auto;
+}
+.services-tab-item li a.active span i{
+    color: red;
+}
+.services-tab-item li a.active {
+    position: relative;
+}
+.services-tab-item li a span i{
+    background-color: #fff;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    line-height: 80px;
+    font-size: 30px;
+    color: #666;
+}
+.services-tab-content-text{
+    padding-left: 30px;
+}
+.services-tab-content h4{
+    font-size: 22px;
+}
+.services-tab-content p{
+    color: #646462;
+}
+.services-tab-item li a strong{
+    color: #222;
+    font-weight: 600;
+    font-size: 20px;
+}
+.services-tab-content ul{
+    list-style: none;
+    padding-left: 0;
+}
+.services-tab-content ul li::before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+/* ==========================
+What our clients say Start 
+=============================*/
+.testimonials-content p{
+    font-size: 20px;
+}
+.client-deatials h5{
+    color: #e73a3e;
+    margin-bottom: 0;
+}
+.client-deatials p{
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+/*===========================
+ Global leadership team Start 
+ ============================*/
+.member-image{
+    position: relative;
+}
+.member-image img{
+    width: 100%;
+    border-radius: 5px;
+}
+.member-social-icon{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.member-social-icon ul{
+    text-align: center;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+.member-social-icon ul li{
+    display: inline-block;
+    transition: .5s ease-in-out;
+    transform: translateY(45px);
+    opacity: 0;
+    visibility: hidden;
+}
+.member-image:hover .member-social-icon ul li{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.member-image .member-social-icon ul li:nth-child(1){
+    transition-delay: .2s;
+}
+.member-image .member-social-icon ul li:nth-child(2){
+    transition-delay: .3s;
+}
+.member-image .member-social-icon ul li:nth-child(3){
+    transition-delay: .4s;
+}
+.member-image .member-social-icon ul li:nth-child(4){
+    transition-delay: .5s;
+
+}
+.member-social-icon ul li a{
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 40px;
+    color: #444;
+    transition: .4s;
+}
+.member-social-icon ul li a:hover{
+    color: #fff;
+    background: red;
+}
+.member-content{
+    margin-top: 25px;
+}
+.member-content h4{
+    color: red;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.member-content p{
+    color: #666;
+    margin-top: 7px;
+}
+/* Global leadership team  End */
+/* Success story posts Start */
+.blog-thubnail img{
+    max-width: 100%;
+}
+.blog-content{
+    padding: 15px 0;
+}
+.blog-content p{
+    color: #e73a3e;
+    font-size: 18px;
+}
+.blog-content h3{
+    margin-bottom: 12px;
+}
+.blog-content h3 a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #111;
+}
+.blog-content a{
+    text-decoration: none;
+    font-size: 18px;
+    color: #111;
+    transition: .5s;
+}
+.blog-item:hover .blog-content a{
+    letter-spacing: 1.5px;
+    color: #e73a3e;
+}
+.blog-item:hover .blog-content h3 a{
+    letter-spacing: 0;
+    color: #111;
+}
+/* Success story posts  End */
+/* Footer Start */
+.footer{
+    background-color: #111111;
+    color: #fff;
+}
+.footer-widget h3 {
+    font-size: 22px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.footer-widget ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.footer-widget ul li {
+    margin: 10px 0;
+}
+.footer-widget ul li a {
+    text-decoration: none;
+    transition: .4s;
+}
+.footer-widget ul li a:hover{
+    letter-spacing: 1.5;
+    color: red;
+}
+.footer-top{
+    border-bottom: 1px solid #444;
+}
+.footer a{
+    color: #fff;
+}
+
+/*  Footer Social Start  */
+.widget-social ul{
+    display: flex;
+}
+.widget-social ul li{
+    padding: 10px 0;
+    margin: 0 !important;
+}
+.widget-social ul li span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+}
+.widget-social ul li a {
+    font-size: 20px;
+    padding: 10px 10px;
+}
+.footer-copyright p{
+    margin-bottom: 0;
+}
+.footer-contact-item {
+    margin-bottom: 20px;
+}
+.footer-contact-item span {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.footer-contact-item a {
+    text-decoration: none;
+}
+/* Footer Social End */
+/*  */
+.header-breadcrumb{
+    padding: 120px 0;
+    background-image: url(https://i.ibb.co/Z65MTB9/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 15%;
+    position: relative;
+    z-index: -1;
+}
+.header-breadcrumb:hover{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(153, 108, 108,.6);
     z-index: 1;
 }
