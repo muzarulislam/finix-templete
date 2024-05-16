@@ -13,12 +13,23 @@ Header-Menu-Section
 .slider-section .container-fluid{
     max-width: 1480px;
 }
+.navbar-brand{
+    width: 215px;
+}
 ul.our-menu li a{
     text-decoration: none;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: #111;
+    font-size: 14px;
     font-weight: 500;
+    transition: .5s;
+}
+.our-menu .active{
+    color: red;
+}
+.our-menu i{
+    font-size: 12px;
 }
 
 /* Menu-Hover-Secrion */
@@ -48,30 +59,43 @@ ul.our-menu li:hover ul{
 }
 ul.our-menu li ul li a:hover{
     color: #e73a3e;
+    letter-spacing: 1.3px;
+}
+ul.our-menu li ul li:hover{
+    letter-spacing: 0;
 }
 
 /* Heder-Right */
 .header-search{
     width: 60px;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     margin-right: 20px;
+    font-weight: bold;
     border-right: 1px solid #ddd;
 }
 .header-call{
-    width: 220px;
+    width: 215px;
+    display: flex;
 }
-.header-call-info span{
-    color: #606060;
+.header-call-icon{
+    display: flex;
 }
-.header-call-info  a{
+.header-call-icon i{
+    color: red;
+    font-size: 24px;
+}
+.header-call-info a{
+    font-size: 16px;
     font-weight: 500;
     color: #111;
     text-decoration: none;
 }
+.header-call-info{
+    color: #606060;
+}
 .header-call-icon{
-    font-size: 30px;
-    color: #e73a3e;
+    margin-right: 15px;
 }
 body .btn-primary{
     background: #e73a3e !important;
@@ -126,7 +150,7 @@ Banner-Section
 .slider-content p{
     font-weight: 500;
     color: #606060;
-    font-size: 20px;
+    font-size: 18px;
 }
 .header-social{
     position: absolute;
@@ -554,13 +578,31 @@ What our clients say Start
 .testimonials-content p{
     font-size: 20px;
 }
-.client-deatials h5{
+.client-deatials h6{
     color: #e73a3e;
-    margin-bottom: 0;
+    padding-top: 5px;
 }
 .client-deatials p{
     font-size: 15px;
-    margin-top: 8px;
+    color: #646462;
+}
+.testimonials-image{
+    position: relative;
+}
+.testimonials-image span::after{
+    content: "\f10e";
+    font: var(--fa-font-solid);
+    position: absolute;
+    background-color: #fdeded;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 48px;
+    text-align: center;
+    color: red;
+    border-radius: 50%;
+    left: 70px;
+    bottom: 70px;
 }
 
 /*===========================
@@ -631,14 +673,18 @@ What our clients say Start
 .member-content h4{
     color: red;
     margin-bottom: 5px;
-    font-size: 20px;
+    font-size: 18px;
 }
 .member-content p{
+    font-size: 14px;
     color: #666;
     margin-top: 7px;
 }
-/* Global leadership team  End */
-/* Success story posts Start */
+
+/* 
+=========================
+Success story posts Start
+======================== */
 .blog-thubnail img{
     max-width: 100%;
 }
@@ -647,66 +693,48 @@ What our clients say Start
 }
 .blog-content p{
     color: #e73a3e;
-    font-size: 18px;
+    font-size: 14px;
 }
 .blog-content h3{
-    margin-bottom: 12px;
-}
-.blog-content h3 a{
-    text-decoration: none;
-    font-size: 25px;
-    color: #111;
+    font-size: 24px;
+    font-weight: 500;
 }
 .blog-content a{
     text-decoration: none;
-    font-size: 18px;
     color: #111;
-    transition: .5s;
-}
-.blog-item:hover .blog-content a{
-    letter-spacing: 1.5px;
-    color: #e73a3e;
+    transition: .8s;
 }
 .blog-item:hover .blog-content h3 a{
-    letter-spacing: 0;
-    color: #111;
+    color: #e73a3e;
 }
-/* Success story posts  End */
-/* Footer Start */
-.footer{
-    background-color: #111111;
-    color: #fff;
-}
-.footer-widget h3 {
-    font-size: 22px;
-    border-bottom: 1px solid #444;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-}
-.footer-widget ul {
-    list-style: none;
-    padding-left: 0;
-    margin-left: 0;
-}
-.footer-widget ul li {
-    margin: 10px 0;
-}
-.footer-widget ul li a {
-    text-decoration: none;
-    transition: .4s;
-}
-.footer-widget ul li a:hover{
-    letter-spacing: 1.5;
-    color: red;
-}
-.footer-top{
-    border-bottom: 1px solid #444;
-}
-.footer a{
-    color: #fff;
+.blog-item:hover .blog-btn{
+    color: #e73a3e;
+    letter-spacing: 1.5px;
 }
 
-/*  Footer Social Start  */
+
+/* ===============
+Sub-Footer 
+==================*/
+.sub-footer{
+    background-color: #111111;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.sub-footer a{
+    color: #fff;
+}
+.footer-widget p{
+    font-size: 14px;
+}
+.widget-social ul li span{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.widget-social i{
+    font-size: 16px;
+}
 .widget-social ul{
     display: flex;
 }
@@ -714,20 +742,33 @@ What our clients say Start
     padding: 10px 0;
     margin: 0 !important;
 }
-.widget-social ul li span {
-    display: inline-block;
-    margin-right: 10px;
-    font-size: 18px;
-}
 .widget-social ul li a {
     font-size: 20px;
     padding: 10px 10px;
 }
-.footer-copyright p{
-    margin-bottom: 0;
+.footer-widget ul{
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.footer-widget ul li a{
+    text-decoration: none;
+    line-height: 38px;
+    transition: .6s;
+}
+.footer-widget ul li:hover a{
+    letter-spacing: 1.5px;
+    color: red;
+    transition: .6s;
+}
+.footer-widget h3 {
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 .footer-contact-item {
-    margin-bottom: 20px;
+    padding: 10px 0;
 }
 .footer-contact-item span {
     display: inline-block;
@@ -737,24 +778,23 @@ What our clients say Start
 .footer-contact-item a {
     text-decoration: none;
 }
-/* Footer Social End */
-/*  */
-.header-breadcrumb{
-    padding: 120px 0;
-    background-image: url(https://i.ibb.co/Z65MTB9/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center 15%;
-    position: relative;
-    z-index: -1;
+
+/*  ==================
+Footer 
+=====================*/
+.footer-bottom{
+    background-color: #111111;
 }
-.header-breadcrumb:hover{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(153, 108, 108,.6);
-    z-index: 1;
+.footer-copyright p{
+    color: #606060;
+    margin-bottom: 0;
 }
+.footer-copyright a{
+    text-decoration: none;
+    color: #fff;
+    transition: .6s;
+}
+.footer-copyright a:hover{
+    color: red;
+}
+
